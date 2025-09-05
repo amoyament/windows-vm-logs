@@ -47,10 +47,10 @@ mkdir -p /tmp/cache
 git clone https://github.com/nmartins0611/windows_getting_started_instruqt.git /tmp/cache
 
 # Configure Repo for builds
-if getent hosts gitea >/dev/null 2>&1; then
+if command -v podman >/dev/null 2>&1 && podman container exists gitea; then
 ansible-playbook /tmp/git-setup.yml -i /tmp/inventory.ini -e @/tmp/track-vars.yml
 else
-echo "Skipping Gitea configuration: host 'gitea' not reachable."
+echo "Skipping Gitea configuration: podman container 'gitea' not found."
 fi
 
 # Configure Controller
@@ -90,46 +90,46 @@ cat <<EOF | tee /tmp/git-setup.yml
     - gitea-config
 
   tasks:
-    - name: Install python3 Gitea
-      ansible.builtin.raw: /sbin/apk add python3
-
-    - name: Install Gitea packages
-      community.general.apk:
-        name:
-          - subversion
-          - tar
-        state: present
-
     - name: Create repo users
-      ansible.builtin.command: "{{ item }}"
-      become_user: git
+      delegate_to: localhost
+      become: true
+      ansible.builtin.command: "podman exec --user git gitea {{ item }}"
       register: __output
       failed_when: __output.rc not in [ 0, 1 ]
       changed_when: '"user already exists" not in __output.stdout'
       loop:
         - "/usr/local/bin/gitea admin user create --admin --username {{ student_user }} --password {{ student_password }} --must-change-password=false --email {{ student_user }}@localhost"
 
-    - name: Create repo for project 
-      ansible.builtin.uri:
-        url: http://gitea:3000/api/v1/user/repos
-        method: POST
-        body_format: json
-        body:
-          name: workshop_project
-          auto_init: false
-          private: false
-        force_basic_auth: true
-        url_password: "{{ student_password }}"
-        url_username: "{{ student_user }}"
-        status_code: [201, 409]
+    - name: Create repo for project (inside container via API)
+      delegate_to: localhost
+      become: true
+      ansible.builtin.shell: |
+        podman exec gitea curl -s -o /dev/null -w "%{http_code}" \
+          -u "{{ student_user }}:{{ student_password }}" \
+          -H "Content-Type: application/json" \
+          -X POST \
+          -d '{"name":"workshop_project","auto_init":false,"private":false}' \
+          http://localhost:3000/api/v1/user/repos
+      register: __create_repo_status
+      changed_when: __create_repo_status.stdout == "201"
+      failed_when: __create_repo_status.stdout not in ["201","409"]
+
+    - name: Check if host can reach Gitea on localhost:3000
+      delegate_to: localhost
+      ansible.builtin.command:
+        cmd: curl -sf http://localhost:3000/api/v1/version
+      register: __gitea_host_reachable
+      ignore_errors: true
 
     - name: Create repo dir
+      delegate_to: localhost
       ansible.builtin.file:
         path: "/tmp/workshop_project"
         state: directory
         mode: 0755
 
     - name: Configure git to use main repo by default
+      delegate_to: localhost
       community.general.git_config:
         name: init.defaultBranch
         scope: global
@@ -138,47 +138,55 @@ cat <<EOF | tee /tmp/git-setup.yml
         - git
 
     - name: Initialise track repo
+      delegate_to: localhost
       ansible.builtin.command:
         cmd: /usr/bin/git init
         chdir: "/tmp/workshop_project"
         creates: "/tmp/workshop_project/.git" 
 
     - name: Configure git to store credentials
+      delegate_to: localhost
       community.general.git_config:
         name: credential.helper
         scope: global
         value: store --file /tmp/git-creds
 
     - name: Configure repo dir as git safe dir
+      delegate_to: localhost
       community.general.git_config:
         name: safe.directory
         scope: global
         value: "/tmp/workshop_project"
 
     - name: Store repo credentials in git-creds file
+      delegate_to: localhost
       ansible.builtin.copy:
         dest: /tmp/git-creds
         mode: 0644
         content: "http://{{ student_user }}:{{ student_password }}@{{ 'gitea:3000' | urlencode }}"
 
     - name: Configure git username
+      delegate_to: localhost
       community.general.git_config:
         name: user.name
         scope: global
         value: "{{ ansible_user }}"
 
     - name: Configure git email address
+      delegate_to: localhost
       community.general.git_config:
         name: user.email
         scope: global
         value: "{{ ansible_user }}@local"
 
     - name: Create generic ReadME
+      delegate_to: localhost
       ansible.builtin.file:
        path: /tmp/workshop_project/Readme
        state: touch
 
     - name: Add remote origin to repo
+      delegate_to: localhost
       ansible.builtin.command:
         cmd: "{{ item }}"
         chdir: "/tmp/workshop_project"   
@@ -189,7 +197,15 @@ cat <<EOF | tee /tmp/git-setup.yml
         - "git checkout -b main"
         - "git add ."
         - "git commit -m'Initial commit'"
-        - "git push -u origin main --force"
+
+    - name: Push repo to Gitea (host reachable)
+      delegate_to: localhost
+      ansible.builtin.command:
+        cmd: git push -u origin main --force
+        chdir: "/tmp/workshop_project"
+      register: __push_output
+      changed_when: __push_output.rc == 0
+      when: __gitea_host_reachable is defined and __gitea_host_reachable.rc == 0
 EOF
 
 ############################ REVISED CONTROLLER CONFIG ############################
