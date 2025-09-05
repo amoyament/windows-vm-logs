@@ -25,7 +25,7 @@ controller.acme.example.com ansible_host=controller ansible_user=rhel ansible_co
 
 [ciservers]
 # gitea ansible_user=root ansible_connection=docker
-gitea ansible_user=root
+gitea ansible_user=root ansible_connection=local
 jenkins ansible_user=root
 
 [windowssrv]
@@ -85,6 +85,7 @@ cat <<EOF | tee /tmp/git-setup.yml
 - name: Configure Gitea host
   hosts: gitea
   gather_facts: false
+  connection: local
   become: true
   tags:
     - gitea-config
@@ -566,3 +567,7 @@ pip3.9 install yamllint
 # sudo dnf install -y ansible-lint
 # sudo dnf install -y nc
 # pip3.9 install yamllint
+
+
+
+
