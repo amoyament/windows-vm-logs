@@ -48,7 +48,7 @@ git clone https://github.com/nmartins0611/windows_getting_started_instruqt.git /
 
 # Configure Repo for builds
 if command -v podman >/dev/null 2>&1 && podman container exists gitea; then
-ansible-playbook /tmp/git-setup.yml -i /tmp/inventory.ini -e @/tmp/track-vars.yml
+ansible-playbook /tmp/git-setup.yml -i /tmp/inventory.ini -e @/tmp/track-vars.yml -l localhost
 else
 echo "Skipping Gitea configuration: podman container 'gitea' not found."
 fi
@@ -83,7 +83,7 @@ EOF
 cat <<EOF | tee /tmp/git-setup.yml
 # Gitea config
 - name: Configure Gitea host
-  hosts: gitea
+  hosts: localhost
   gather_facts: false
   connection: local
   become: true
