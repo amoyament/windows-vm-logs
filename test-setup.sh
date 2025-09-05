@@ -566,7 +566,3 @@ pip3.9 install yamllint
 # sudo dnf install -y ansible-lint
 # sudo dnf install -y nc
 # pip3.9 install yamllint
-
-
-
-
