@@ -1,0 +1,838 @@
++ dnf install -y python3-pip
+Updating Subscription Management repositories.
+Red Hat Enterprise Linux 9 for x86_64 - AppStre  24 kB/s | 4.5 kB     00:00    
+Red Hat Enterprise Linux 9 for x86_64 - AppStre  68 MB/s |  67 MB     00:00    
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS   28 kB/s | 4.1 kB     00:00    
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS   73 MB/s |  75 MB     00:01    
+Last metadata expiration check: 0:00:08 ago on Fri 05 Sep 2025 02:18:38 PM SAST.
+Dependencies resolved.
+================================================================================
+ Package       Arch     Version        Repository                          Size
+================================================================================
+Installing:
+ python3-pip   noarch   21.3.1-1.el9   rhel-9-for-x86_64-appstream-rpms   2.0 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 2.0 M
+Installed size: 8.8 M
+Downloading Packages:
+python3-pip-21.3.1-1.el9.noarch.rpm             4.8 MB/s | 2.0 MB     00:00    
+--------------------------------------------------------------------------------
+Total                                           4.8 MB/s | 2.0 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-pip-21.3.1-1.el9.noarch                        1/1 
+  Running scriptlet: python3-pip-21.3.1-1.el9.noarch                        1/1 
+  Verifying        : python3-pip-21.3.1-1.el9.noarch                        1/1 
+Installed products updated.
+
+Installed:
+  python3-pip-21.3.1-1.el9.noarch                                               
+
+Complete!
++ dnf install -y python3-pip python3-libsemanage
+Updating Subscription Management repositories.
+Last metadata expiration check: 0:00:16 ago on Fri 05 Sep 2025 02:18:38 PM SAST.
+Package python3-pip-21.3.1-1.el9.noarch is already installed.
+Package python3-libsemanage-3.6-2.1.el9_5.x86_64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package             Arch   Version      Repository                        Size
+================================================================================
+Upgrading:
+ libselinux          x86_64 3.6-3.el9    rhel-9-for-x86_64-baseos-rpms     88 k
+ libselinux-utils    x86_64 3.6-3.el9    rhel-9-for-x86_64-baseos-rpms    194 k
+ libsemanage         x86_64 3.6-5.el9_6  rhel-9-for-x86_64-baseos-rpms    121 k
+ python3-libselinux  x86_64 3.6-3.el9    rhel-9-for-x86_64-appstream-rpms 192 k
+ python3-libsemanage x86_64 3.6-5.el9_6  rhel-9-for-x86_64-appstream-rpms  81 k
+
+Transaction Summary
+================================================================================
+Upgrade  5 Packages
+
+Total download size: 675 k
+Downloading Packages:
+(1/5): python3-libsemanage-3.6-5.el9_6.x86_64.r 519 kB/s |  81 kB     00:00    
+(2/5): libselinux-3.6-3.el9.x86_64.rpm          532 kB/s |  88 kB     00:00    
+(3/5): python3-libselinux-3.6-3.el9.x86_64.rpm  1.1 MB/s | 192 kB     00:00    
+(4/5): libsemanage-3.6-5.el9_6.x86_64.rpm       2.2 MB/s | 121 kB     00:00    
+(5/5): libselinux-utils-3.6-3.el9.x86_64.rpm    1.5 MB/s | 194 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           2.3 MB/s | 675 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Upgrading        : libselinux-3.6-3.el9.x86_64                           1/10 
+  Running scriptlet: libselinux-3.6-3.el9.x86_64                           1/10 
+  Upgrading        : python3-libselinux-3.6-3.el9.x86_64                   2/10 
+  Upgrading        : libsemanage-3.6-5.el9_6.x86_64                        3/10 
+  Upgrading        : python3-libsemanage-3.6-5.el9_6.x86_64                4/10 
+  Upgrading        : libselinux-utils-3.6-3.el9.x86_64                     5/10 
+  Cleanup          : python3-libsemanage-3.6-2.1.el9_5.x86_64              6/10 
+  Cleanup          : python3-libselinux-3.6-1.el9.x86_64                   7/10 
+  Cleanup          : libselinux-utils-3.6-1.el9.x86_64                     8/10 
+  Cleanup          : libsemanage-3.6-2.1.el9_5.x86_64                      9/10 
+  Cleanup          : libselinux-3.6-1.el9.x86_64                          10/10 
+  Running scriptlet: libselinux-3.6-1.el9.x86_64                          10/10 
+  Verifying        : python3-libselinux-3.6-3.el9.x86_64                   1/10 
+  Verifying        : python3-libselinux-3.6-1.el9.x86_64                   2/10 
+  Verifying        : python3-libsemanage-3.6-5.el9_6.x86_64                3/10 
+  Verifying        : python3-libsemanage-3.6-2.1.el9_5.x86_64              4/10 
+  Verifying        : libselinux-3.6-3.el9.x86_64                           5/10 
+  Verifying        : libselinux-3.6-1.el9.x86_64                           6/10 
+  Verifying        : libselinux-utils-3.6-3.el9.x86_64                     7/10 
+  Verifying        : libselinux-utils-3.6-1.el9.x86_64                     8/10 
+  Verifying        : libsemanage-3.6-5.el9_6.x86_64                        9/10 
+  Verifying        : libsemanage-3.6-2.1.el9_5.x86_64                     10/10 
+Installed products updated.
+
+Upgraded:
+  libselinux-3.6-3.el9.x86_64              libselinux-utils-3.6-3.el9.x86_64    
+  libsemanage-3.6-5.el9_6.x86_64           python3-libselinux-3.6-3.el9.x86_64  
+  python3-libsemanage-3.6-5.el9_6.x86_64  
+
+Complete!
++ cp -a '/root/.ssh/*' /home/rhel/.ssh/.
+cp: cannot stat '/root/.ssh/*': No such file or directory
++ chown -R rhel:rhel /home/rhel/.ssh
+chown: cannot access '/home/rhel/.ssh': No such file or directory
++ mkdir -p /home/rhel/ansible
++ chown -R rhel:rhel /home/rhel/ansible
++ chmod 777 /home/rhel/ansible
++ git config --global user.email student@redhat.com
++ git config --global user.name student
++ tee /tmp/inventory.ini
++ cat
+[ctrlnodes]
+controller.acme.example.com ansible_host=controller ansible_user=rhel ansible_connection=local
+
+[ciservers]
+# gitea ansible_user=root ansible_connection=docker
+gitea ansible_user=root
+jenkins ansible_user=root
+
+[windowssrv]
+windows ansible_host=domainctl ansible_user=instruqt ansible_password=Passw0rd! ansible_connection=winrm ansible_port=5986 ansible_winrm_server_cert_validation=ignore
+
+[ciservers:vars]
+ansible_become_method=su
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
++ cat
++ tee /tmp/lab-setup.sh
+#!/bin/bash
+dnf install git nano -y
+mkdir -p /tmp/cache
+git clone https://github.com/nmartins0611/windows_getting_started_instruqt.git /tmp/cache
+
+# Configure Repo for builds
+ansible-playbook /tmp/git-setup.yml -i /tmp/inventory.ini -e @/tmp/track-vars.yml
+
+# Configure Controller
+ansible-playbook /tmp/controller-setup.yml -i /tmp/inventory.ini -e @/tmp/track-vars.yml
++ cat
++ tee /tmp/track-vars.yml
+---
+# config vars
+controller_hostname: controller
+controller_validate_certs: false
+ansible_python_interpreter: /usr/bin/python3
+controller_ee: windows workshop execution environment
+student_user: student
+student_password: learn_ansible
+controller_admin_user: admin
+controller_admin_password: "ansible123!"
+host_key_checking: false
+custom_facts_dir: "/etc/ansible/facts.d"
+custom_facts_file: custom_facts.fact
+admin_username: admin
+admin_password: ansible123!
+repo_user: rhel
+default_tag_name: "0.0.1"
+lab_organization: ACME
++ cat
++ tee /tmp/git-setup.yml
+# Gitea config
+- name: Configure Gitea host
+  hosts: gitea
+  gather_facts: false
+  become: true
+  tags:
+    - gitea-config
+
+  tasks:
+    - name: Install python3 Gitea
+      ansible.builtin.raw: /sbin/apk add python3
+
+    - name: Install Gitea packages
+      community.general.apk:
+        name: subversion, tar
+        state: present
+
+    - name: Create repo users
+      ansible.builtin.command: "{{ item }}"
+      become_user: git
+      register: __output
+      failed_when: __output.rc not in [ 0, 1 ]
+      changed_when: '"user already exists" not in __output.stdout'
+      loop:
+        - "/usr/local/bin/gitea admin user create --admin --username {{ student_user }} --password {{ student_password }} --must-change-password=false --email {{ student_user }}@localhost"
+
+    - name: Create repo for project 
+      ansible.builtin.uri:
+        url: http://gitea:3000/api/v1/user/repos
+        method: POST
+        body_format: json
+        body:
+          name: workshop_project
+          auto_init: false
+          private: false
+        force_basic_auth: true
+        url_password: "{{ student_password }}"
+        url_username: "{{ student_user }}"
+        status_code: [201, 409]
+
+    - name: Create repo dir
+      ansible.builtin.file:
+        path: "/tmp/workshop_project"
+        state: directory
+        mode: 0755
+
+    - name: Configure git to use main repo by default
+      community.general.git_config:
+        name: init.defaultBranch
+        scope: global
+        value: main
+      tags:
+        - git
+
+    - name: Initialise track repo
+      ansible.builtin.command:
+        cmd: /usr/bin/git init
+        chdir: "/tmp/workshop_project"
+        creates: "/workshop_project/.git" 
+
+    - name: Configure git to store credentials
+      community.general.git_config:
+        name: credential.helper
+        scope: global
+        value: store --file /tmp/git-creds
+
+    - name: Configure repo dir as git safe dir
+      community.general.git_config:
+        name: safe.directory
+        scope: global
+        value: "/tmp/workshop_project"
+
+    - name: Store repo credentials in git-creds file
+      ansible.builtin.copy:
+        dest: /tmp/git-creds
+        mode: 0644
+        content: "http://{{ student_user }}:{{ student_password }}@{{ 'gitea:3000' | urlencode }}"
+
+    - name: Configure git username
+      community.general.git_config:
+        name: user.name
+        scope: global
+        value: "{{ ansible_user }}"
+
+    - name: Configure git email address
+      community.general.git_config:
+        name: user.email
+        scope: global
+        value: "{{ ansible_user }}@local"
+
+    - name: Create generic ReadME
+      ansible.builtin.file:
+       path: /tmp/workshop_project/Readme
+       state: touch
+
+    - name: Add remote origin to repo
+      ansible.builtin.command:
+        cmd: "{{ item }}"
+        chdir: "/tmp/workshop_project"   
+      register: __output
+      changed_when: __output.rc == 0
+      loop:
+        - "git remote add origin http://gitea:3000/{{ student_user }}/workshop_project.git"
+        - "git checkout -b main"
+        - "git add ."
+        - "git commit -m'Initial commit'"
+        - "git push -u origin main --force"
++ cat
++ tee /tmp/controller-setup.yml
+## Controller setup
+- name: Controller config for Windows Getting Started
+  hosts: controller.acme.example.com
+  gather_facts: false
+  
+  vars:
+    # Define common controller connection parameters here for reuse
+    controller_auth_params:
+      controller_host: "{{ controller_hostname }}"
+      validate_certs: "{{ controller_validate_certs }}"
+
+  tasks:
+    - name: Ensure controller is online and responsive
+      ansible.builtin.uri:
+        url: "https://{{ controller_hostname }}/api/v2/ping/"
+        method: GET
+        user: "{{ controller_admin_user }}"
+        password: "{{ controller_admin_password }}"
+        validate_certs: "{{ controller_validate_certs }}"
+        force_basic_auth: true
+      register: controller_online
+      until: controller_online.status == 200
+      retries: 10
+      delay: 5
+
+    - name: Create an OAuth2 token for automation
+      ansible.controller.token:
+        description: 'Token for lab setup automation'
+        scope: "write"
+        state: present
+        controller_username: "{{ controller_admin_user }}"
+        controller_password: "{{ controller_admin_password }}"
+        <<: *controller_auth_params # Merge in common connection params
+      register: oauth_token
+
+    # Now use the created token for all subsequent tasks
+    - name: Add Organization
+      ansible.controller.organization:
+        name: "{{ lab_organization }}"
+        description: "ACME Corp Organization"
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+
+    - name: Add Instruqt Windows EE
+      ansible.controller.execution_environment:
+        name: "{{ controller_ee }}"
+        image: "quay.io/nmartins/windows_ee"
+        pull: missing # Pulls if not present on the system
+        organization: "{{ lab_organization }}"
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+        
+    - name: Create student admin user
+      ansible.controller.user:
+        username: "{{ student_user }}"
+        password: "{{ student_password }}"
+        email: "student@acme.example.com"
+        is_superuser: true
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+
+    - name: Create Workshop Inventory
+      ansible.controller.inventory:
+        name: "Workshop Inventory"
+        organization: "{{ lab_organization }}"
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+
+    - name: Create Host for Windows Server
+      ansible.controller.host:
+        name: "windows"
+        inventory: "Workshop Inventory"
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+
+    - name: Create Group for Windows Servers
+      ansible.controller.group:
+        name: "Windows Servers"
+        inventory: "Workshop Inventory"
+        state: present
+        variables: |
+          ansible_connection: winrm
+          ansible_port: 5986
+          ansible_winrm_server_cert_validation: ignore
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
+        
+    - name: Associate windows host with the Windows Servers group
+      ansible.controller.host:
+        name: "windows"
+        inventory: "Workshop Inventory"
+        groups:
+          - "Windows Servers"
+        state: present
+        controller_oauthtoken: "{{ oauth_token.token }}"
+        <<: *controller_auth_params
++ ansible-galaxy collection install community.general
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/community-general-11.2.1.tar.gz to /root/.ansible/tmp/ansible-local-43565mnxynj7/tmpbv8hazpr/community-general-11.2.1-wd_aub5j
+Installing 'community.general:11.2.1' to '/root/.ansible/collections/ansible_collections/community/general'
+community.general:11.2.1 was installed successfully
++ ansible-galaxy collection install microsoft.ad
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/microsoft-ad-1.9.2.tar.gz to /root/.ansible/tmp/ansible-local-10039s_8okqi1/tmplyh3c5qm/microsoft-ad-1.9.2-_zqz8x1z
+Installing 'microsoft.ad:1.9.2' to '/root/.ansible/collections/ansible_collections/microsoft/ad'
+microsoft.ad:1.9.2 was installed successfully
++ ansible-galaxy collection install ansible.controller
+Starting galaxy collection install process
+Nothing to do. All requested collections are already installed. If you want to reinstall them, consider using `--force`.
++ pip3 install pywinrm
+Collecting pywinrm
+  Downloading pywinrm-0.5.0-py3-none-any.whl (48 kB)
+Collecting xmltodict
+  Downloading xmltodict-0.15.0-py2.py3-none-any.whl (10 kB)
+Collecting requests-ntlm>=1.1.0
+  Downloading requests_ntlm-1.3.0-py3-none-any.whl (6.6 kB)
+Requirement already satisfied: requests>=2.9.1 in /usr/lib/python3.9/site-packages (from pywinrm) (2.25.1)
+Requirement already satisfied: chardet<5,>=3.0.2 in /usr/lib/python3.9/site-packages (from requests>=2.9.1->pywinrm) (4.0.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python3.9/site-packages (from requests>=2.9.1->pywinrm) (1.26.5)
+Requirement already satisfied: idna<3,>=2.5 in /usr/lib/python3.9/site-packages (from requests>=2.9.1->pywinrm) (2.10)
+Collecting pyspnego>=0.4.0
+  Downloading pyspnego-0.12.0-py3-none-any.whl (130 kB)
+Requirement already satisfied: cryptography>=1.3 in /usr/lib64/python3.9/site-packages (from requests-ntlm>=1.1.0->pywinrm) (36.0.1)
+Requirement already satisfied: cffi>=1.12 in /usr/lib64/python3.9/site-packages (from cryptography>=1.3->requests-ntlm>=1.1.0->pywinrm) (1.14.5)
+Requirement already satisfied: pycparser in /usr/lib/python3.9/site-packages (from cffi>=1.12->cryptography>=1.3->requests-ntlm>=1.1.0->pywinrm) (2.20)
+Requirement already satisfied: ply==3.11 in /usr/lib/python3.9/site-packages (from pycparser->cffi>=1.12->cryptography>=1.3->requests-ntlm>=1.1.0->pywinrm) (3.11)
+Installing collected packages: pyspnego, xmltodict, requests-ntlm, pywinrm
+  WARNING: The script pyspnego-parse is installed in '/usr/local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pyspnego-0.12.0 pywinrm-0.5.0 requests-ntlm-1.3.0 xmltodict-0.15.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++ chmod +x /tmp/lab-setup.sh
++ sh /tmp/lab-setup.sh
+Updating Subscription Management repositories.
+Last metadata expiration check: 0:00:31 ago on Fri 05 Sep 2025 02:18:38 PM SAST.
+Package nano-5.6.1-6.el9.x86_64 is already installed.
+Dependencies resolved.
+==============================================================================================
+ Package                  Arch    Version              Repository                         Size
+==============================================================================================
+Installing:
+ git                      x86_64  2.47.3-1.el9_6       rhel-9-for-x86_64-appstream-rpms   51 k
+Upgrading:
+ git-core                 x86_64  2.47.3-1.el9_6       rhel-9-for-x86_64-appstream-rpms  4.7 M
+ nano                     x86_64  5.6.1-7.el9          rhel-9-for-x86_64-baseos-rpms     713 k
+Installing dependencies:
+ git-core-doc             noarch  2.47.3-1.el9_6       rhel-9-for-x86_64-appstream-rpms  3.0 M
+ perl-AutoLoader          noarch  5.74-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   21 k
+ perl-B                   x86_64  1.80-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms  180 k
+ perl-Carp                noarch  1.50-460.el9         rhel-9-for-x86_64-appstream-rpms   31 k
+ perl-Class-Struct        noarch  0.66-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   22 k
+ perl-Data-Dumper         x86_64  2.174-462.el9        rhel-9-for-x86_64-appstream-rpms   59 k
+ perl-Digest              noarch  1.19-4.el9           rhel-9-for-x86_64-appstream-rpms   29 k
+ perl-Digest-MD5          x86_64  2.58-4.el9           rhel-9-for-x86_64-appstream-rpms   39 k
+ perl-DynaLoader          x86_64  1.47-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   25 k
+ perl-Encode              x86_64  4:3.08-462.el9       rhel-9-for-x86_64-appstream-rpms  1.7 M
+ perl-Errno               x86_64  1.30-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   15 k
+ perl-Error               noarch  1:0.17029-7.el9      rhel-9-for-x86_64-appstream-rpms   46 k
+ perl-Exporter            noarch  5.74-461.el9         rhel-9-for-x86_64-appstream-rpms   34 k
+ perl-Fcntl               x86_64  1.13-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   20 k
+ perl-File-Basename       noarch  2.85-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   17 k
+ perl-File-Find           noarch  1.37-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   25 k
+ perl-File-Path           noarch  2.18-4.el9           rhel-9-for-x86_64-appstream-rpms   38 k
+ perl-File-Temp           noarch  1:0.231.100-4.el9    rhel-9-for-x86_64-appstream-rpms   63 k
+ perl-File-stat           noarch  1.09-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   17 k
+ perl-FileHandle          noarch  2.03-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   15 k
+ perl-Getopt-Long         noarch  1:2.52-4.el9         rhel-9-for-x86_64-appstream-rpms   64 k
+ perl-Getopt-Std          noarch  1.12-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   15 k
+ perl-Git                 noarch  2.47.3-1.el9_6       rhel-9-for-x86_64-appstream-rpms   38 k
+ perl-HTTP-Tiny           noarch  0.076-462.el9        rhel-9-for-x86_64-appstream-rpms   57 k
+ perl-IO                  x86_64  1.43-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   88 k
+ perl-IO-Socket-IP        noarch  0.41-5.el9           rhel-9-for-x86_64-appstream-rpms   45 k
+ perl-IO-Socket-SSL       noarch  2.073-2.el9          rhel-9-for-x86_64-appstream-rpms  221 k
+ perl-IPC-Open3           noarch  1.21-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   22 k
+ perl-MIME-Base64         x86_64  3.16-4.el9           rhel-9-for-x86_64-appstream-rpms   34 k
+ perl-Mozilla-CA          noarch  20200520-6.el9       rhel-9-for-x86_64-appstream-rpms   14 k
+ perl-Net-SSLeay          x86_64  1.94-1.el9           rhel-9-for-x86_64-appstream-rpms  418 k
+ perl-POSIX               x86_64  1.94-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   96 k
+ perl-PathTools           x86_64  3.78-461.el9         rhel-9-for-x86_64-appstream-rpms   92 k
+ perl-Pod-Escapes         noarch  1:1.07-460.el9       rhel-9-for-x86_64-appstream-rpms   22 k
+ perl-Pod-Perldoc         noarch  3.28.01-461.el9      rhel-9-for-x86_64-appstream-rpms   92 k
+ perl-Pod-Simple          noarch  1:3.42-4.el9         rhel-9-for-x86_64-appstream-rpms  229 k
+ perl-Pod-Usage           noarch  4:2.01-4.el9         rhel-9-for-x86_64-appstream-rpms   43 k
+ perl-Scalar-List-Utils   x86_64  4:1.56-462.el9       rhel-9-for-x86_64-appstream-rpms   75 k
+ perl-SelectSaver         noarch  1.02-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   11 k
+ perl-Socket              x86_64  4:2.031-4.el9        rhel-9-for-x86_64-appstream-rpms   58 k
+ perl-Storable            x86_64  1:3.21-460.el9       rhel-9-for-x86_64-appstream-rpms   98 k
+ perl-Symbol              noarch  1.08-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   14 k
+ perl-Term-ANSIColor      noarch  5.01-461.el9         rhel-9-for-x86_64-appstream-rpms   51 k
+ perl-Term-Cap            noarch  1.17-460.el9         rhel-9-for-x86_64-appstream-rpms   24 k
+ perl-TermReadKey         x86_64  2.38-11.el9          rhel-9-for-x86_64-appstream-rpms   40 k
+ perl-Text-ParseWords     noarch  3.30-460.el9         rhel-9-for-x86_64-appstream-rpms   18 k
+ perl-Text-Tabs+Wrap      noarch  2013.0523-460.el9    rhel-9-for-x86_64-appstream-rpms   25 k
+ perl-Time-Local          noarch  2:1.300-7.el9        rhel-9-for-x86_64-appstream-rpms   37 k
+ perl-URI                 noarch  5.09-3.el9           rhel-9-for-x86_64-appstream-rpms  125 k
+ perl-base                noarch  2.27-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   16 k
+ perl-constant            noarch  1.33-461.el9         rhel-9-for-x86_64-appstream-rpms   25 k
+ perl-if                  noarch  0.60.800-481.1.el9_6 rhel-9-for-x86_64-appstream-rpms   14 k
+ perl-interpreter         x86_64  4:5.32.1-481.1.el9_6 rhel-9-for-x86_64-appstream-rpms   70 k
+ perl-lib                 x86_64  0.65-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   14 k
+ perl-libnet              noarch  3.13-4.el9           rhel-9-for-x86_64-appstream-rpms  134 k
+ perl-libs                x86_64  4:5.32.1-481.1.el9_6 rhel-9-for-x86_64-appstream-rpms  2.2 M
+ perl-mro                 x86_64  1.23-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   28 k
+ perl-overload            noarch  1.31-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   45 k
+ perl-overloading         noarch  0.02-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   12 k
+ perl-parent              noarch  1:0.238-460.el9      rhel-9-for-x86_64-appstream-rpms   16 k
+ perl-podlators           noarch  1:4.14-460.el9       rhel-9-for-x86_64-appstream-rpms  118 k
+ perl-subs                noarch  1.03-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   11 k
+ perl-vars                noarch  1.05-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   13 k
+Installing weak dependencies:
+ perl-NDBM_File           x86_64  1.15-481.1.el9_6     rhel-9-for-x86_64-appstream-rpms   22 k
+
+Transaction Summary
+==============================================================================================
+Install  65 Packages
+Upgrade   2 Packages
+
+Total download size: 16 M
+Downloading Packages:
+(1/67): perl-Digest-MD5-2.58-4.el9.x86_64.rpm   415 kB/s |  39 kB     00:00    
+(2/67): perl-Encode-3.08-462.el9.x86_64.rpm      14 MB/s | 1.7 MB     00:00    
+(3/67): perl-Data-Dumper-2.174-462.el9.x86_64.r 454 kB/s |  59 kB     00:00    
+(4/67): perl-Error-0.17029-7.el9.noarch.rpm     909 kB/s |  46 kB     00:00    
+(5/67): perl-Mozilla-CA-20200520-6.el9.noarch.r 300 kB/s |  14 kB     00:00    
+(6/67): perl-Term-Cap-1.17-460.el9.noarch.rpm   508 kB/s |  24 kB     00:00    
+(7/67): perl-Pod-Simple-3.42-4.el9.noarch.rpm   2.2 MB/s | 229 kB     00:00    
+(8/67): perl-TermReadKey-2.38-11.el9.x86_64.rpm 623 kB/s |  40 kB     00:00    
+(9/67): perl-Time-Local-1.300-7.el9.noarch.rpm  615 kB/s |  37 kB     00:00    
+(10/67): perl-Pod-Escapes-1.07-460.el9.noarch.r 380 kB/s |  22 kB     00:00    
+(11/67): perl-podlators-4.14-460.el9.noarch.rpm 2.2 MB/s | 118 kB     00:00    
+(12/67): perl-Storable-3.21-460.el9.x86_64.rpm  946 kB/s |  98 kB     00:00    
+(13/67): perl-Exporter-5.74-461.el9.noarch.rpm  434 kB/s |  34 kB     00:00    
+(14/67): perl-File-Temp-0.231.100-4.el9.noarch. 865 kB/s |  63 kB     00:00    
+(15/67): perl-MIME-Base64-3.16-4.el9.x86_64.rpm 610 kB/s |  34 kB     00:00    
+(16/67): perl-Text-Tabs+Wrap-2013.0523-460.el9. 465 kB/s |  25 kB     00:00    
+(17/67): perl-parent-0.238-460.el9.noarch.rpm   289 kB/s |  16 kB     00:00    
+(18/67): perl-Digest-1.19-4.el9.noarch.rpm      576 kB/s |  29 kB     00:00    
+(19/67): perl-Getopt-Long-2.52-4.el9.noarch.rpm 419 kB/s |  64 kB     00:00    
+(20/67): perl-File-Path-2.18-4.el9.noarch.rpm   710 kB/s |  38 kB     00:00    
+(21/67): perl-Pod-Usage-2.01-4.el9.noarch.rpm   641 kB/s |  43 kB     00:00    
+(22/67): perl-IO-Socket-IP-0.41-5.el9.noarch.rp 479 kB/s |  45 kB     00:00    
+(23/67): perl-Term-ANSIColor-5.01-461.el9.noarc 914 kB/s |  51 kB     00:00    
+(24/67): perl-Socket-2.031-4.el9.x86_64.rpm     541 kB/s |  58 kB     00:00    
+(25/67): perl-Text-ParseWords-3.30-460.el9.noar 148 kB/s |  18 kB     00:00    
+(26/67): perl-URI-5.09-3.el9.noarch.rpm         1.3 MB/s | 125 kB     00:00    
+(27/67): perl-constant-1.33-461.el9.noarch.rpm  310 kB/s |  25 kB     00:00    
+(28/67): perl-Pod-Perldoc-3.28.01-461.el9.noarc 1.2 MB/s |  92 kB     00:00    
+(29/67): perl-Carp-1.50-460.el9.noarch.rpm      507 kB/s |  31 kB     00:00    
+(30/67): perl-HTTP-Tiny-0.076-462.el9.noarch.rp 1.2 MB/s |  57 kB     00:00    
+(31/67): perl-libnet-3.13-4.el9.noarch.rpm      805 kB/s | 134 kB     00:00    
+(32/67): perl-IO-Socket-SSL-2.073-2.el9.noarch. 4.0 MB/s | 221 kB     00:00    
+(33/67): perl-Net-SSLeay-1.94-1.el9.x86_64.rpm  6.9 MB/s | 418 kB     00:00    
+(34/67): perl-Scalar-List-Utils-1.56-462.el9.x8 577 kB/s |  75 kB     00:00    
+(35/67): git-2.47.3-1.el9_6.x86_64.rpm          586 kB/s |  51 kB     00:00    
+(36/67): perl-PathTools-3.78-461.el9.x86_64.rpm 364 kB/s |  92 kB     00:00    
+(37/67): perl-Git-2.47.3-1.el9_6.noarch.rpm     757 kB/s |  38 kB     00:00    
+(38/67): perl-AutoLoader-5.74-481.1.el9_6.noarc 269 kB/s |  21 kB     00:00    
+(39/67): perl-B-1.80-481.1.el9_6.x86_64.rpm     2.1 MB/s | 180 kB     00:00    
+(40/67): perl-DynaLoader-1.47-481.1.el9_6.x86_6 384 kB/s |  25 kB     00:00    
+(41/67): perl-Class-Struct-0.66-481.1.el9_6.noa 175 kB/s |  22 kB     00:00    
+(42/67): git-core-doc-2.47.3-1.el9_6.noarch.rpm  11 MB/s | 3.0 MB     00:00    
+(43/67): perl-Fcntl-1.13-481.1.el9_6.x86_64.rpm 289 kB/s |  20 kB     00:00    
+(44/67): perl-Errno-1.30-481.1.el9_6.x86_64.rpm 147 kB/s |  15 kB     00:00    
+(45/67): perl-File-Find-1.37-481.1.el9_6.noarch 483 kB/s |  25 kB     00:00    
+(46/67): perl-File-stat-1.09-481.1.el9_6.noarch 279 kB/s |  17 kB     00:00    
+(47/67): perl-FileHandle-2.03-481.1.el9_6.noarc 175 kB/s |  15 kB     00:00    
+(48/67): perl-Getopt-Std-1.12-481.1.el9_6.noarc 127 kB/s |  15 kB     00:00    
+(49/67): perl-IO-1.43-481.1.el9_6.x86_64.rpm    1.0 MB/s |  88 kB     00:00    
+(50/67): perl-File-Basename-2.85-481.1.el9_6.no  68 kB/s |  17 kB     00:00    
+(51/67): perl-NDBM_File-1.15-481.1.el9_6.x86_64 353 kB/s |  22 kB     00:00    
+(52/67): perl-SelectSaver-1.02-481.1.el9_6.noar 207 kB/s |  11 kB     00:00    
+(53/67): perl-IPC-Open3-1.21-481.1.el9_6.noarch 141 kB/s |  22 kB     00:00    
+(54/67): perl-POSIX-1.94-481.1.el9_6.x86_64.rpm 681 kB/s |  96 kB     00:00    
+(55/67): perl-Symbol-1.08-481.1.el9_6.noarch.rp 257 kB/s |  14 kB     00:00    
+(56/67): perl-base-2.27-481.1.el9_6.noarch.rpm  184 kB/s |  16 kB     00:00    
+(57/67): perl-interpreter-5.32.1-481.1.el9_6.x8 1.1 MB/s |  70 kB     00:00    
+(58/67): perl-if-0.60.800-481.1.el9_6.noarch.rp 115 kB/s |  14 kB     00:00    
+(59/67): perl-libs-5.32.1-481.1.el9_6.x86_64.rp  26 MB/s | 2.2 MB     00:00    
+(60/67): perl-lib-0.65-481.1.el9_6.x86_64.rpm   135 kB/s |  14 kB     00:00    
+(61/67): perl-mro-1.23-481.1.el9_6.x86_64.rpm   316 kB/s |  28 kB     00:00    
+(62/67): perl-overload-1.31-481.1.el9_6.noarch. 890 kB/s |  45 kB     00:00    
+(63/67): perl-overloading-0.02-481.1.el9_6.noar 247 kB/s |  12 kB     00:00    
+(64/67): perl-subs-1.03-481.1.el9_6.noarch.rpm  235 kB/s |  11 kB     00:00    
+(65/67): git-core-2.47.3-1.el9_6.x86_64.rpm      44 MB/s | 4.7 MB     00:00    
+(66/67): perl-vars-1.05-481.1.el9_6.noarch.rpm  100 kB/s |  13 kB     00:00    
+(67/67): nano-5.6.1-7.el9.x86_64.rpm            5.2 MB/s | 713 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           7.5 MB/s |  16 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : perl-Digest-1.19-4.el9.noarch                         1/69 
+  Installing       : perl-Digest-MD5-2.58-4.el9.x86_64                     2/69 
+  Installing       : perl-FileHandle-2.03-481.1.el9_6.noarch               3/69 
+  Installing       : perl-B-1.80-481.1.el9_6.x86_64                        4/69 
+  Installing       : perl-libnet-3.13-4.el9.noarch                         5/69 
+  Installing       : perl-Data-Dumper-2.174-462.el9.x86_64                 6/69 
+  Installing       : perl-AutoLoader-5.74-481.1.el9_6.noarch               7/69 
+  Installing       : perl-base-2.27-481.1.el9_6.noarch                     8/69 
+  Installing       : perl-URI-5.09-3.el9.noarch                            9/69 
+  Installing       : perl-Time-Local-2:1.300-7.el9.noarch                 10/69 
+  Installing       : perl-Mozilla-CA-20200520-6.el9.noarch                11/69 
+  Installing       : perl-if-0.60.800-481.1.el9_6.noarch                  12/69 
+  Installing       : perl-IO-Socket-IP-0.41-5.el9.noarch                  13/69 
+  Installing       : perl-Pod-Escapes-1:1.07-460.el9.noarch               14/69 
+  Installing       : perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch         15/69 
+  Installing       : perl-File-Path-2.18-4.el9.noarch                     16/69 
+  Installing       : perl-Net-SSLeay-1.94-1.el9.x86_64                    17/69 
+  Installing       : perl-IO-Socket-SSL-2.073-2.el9.noarch                18/69 
+  Installing       : perl-Term-ANSIColor-5.01-461.el9.noarch              19/69 
+  Installing       : perl-Class-Struct-0.66-481.1.el9_6.noarch            20/69 
+  Installing       : perl-POSIX-1.94-481.1.el9_6.x86_64                   21/69 
+  Installing       : perl-IPC-Open3-1.21-481.1.el9_6.noarch               22/69 
+  Installing       : perl-subs-1.03-481.1.el9_6.noarch                    23/69 
+  Installing       : perl-Term-Cap-1.17-460.el9.noarch                    24/69 
+  Installing       : perl-File-Temp-1:0.231.100-4.el9.noarch              25/69 
+  Installing       : perl-Pod-Simple-1:3.42-4.el9.noarch                  26/69 
+  Installing       : perl-HTTP-Tiny-0.076-462.el9.noarch                  27/69 
+  Installing       : perl-Socket-4:2.031-4.el9.x86_64                     28/69 
+  Installing       : perl-SelectSaver-1.02-481.1.el9_6.noarch             29/69 
+  Installing       : perl-Symbol-1.08-481.1.el9_6.noarch                  30/69 
+  Installing       : perl-File-stat-1.09-481.1.el9_6.noarch               31/69 
+  Installing       : perl-podlators-1:4.14-460.el9.noarch                 32/69 
+  Installing       : perl-Pod-Perldoc-3.28.01-461.el9.noarch              33/69 
+  Installing       : perl-Text-ParseWords-3.30-460.el9.noarch             34/69 
+  Installing       : perl-Fcntl-1.13-481.1.el9_6.x86_64                   35/69 
+  Installing       : perl-mro-1.23-481.1.el9_6.x86_64                     36/69 
+  Installing       : perl-IO-1.43-481.1.el9_6.x86_64                      37/69 
+  Installing       : perl-overloading-0.02-481.1.el9_6.noarch             38/69 
+  Installing       : perl-Pod-Usage-4:2.01-4.el9.noarch                   39/69 
+  Installing       : perl-parent-1:0.238-460.el9.noarch                   40/69 
+  Installing       : perl-MIME-Base64-3.16-4.el9.x86_64                   41/69 
+  Installing       : perl-constant-1.33-461.el9.noarch                    42/69 
+  Installing       : perl-Scalar-List-Utils-4:1.56-462.el9.x86_64         43/69 
+  Installing       : perl-Errno-1.30-481.1.el9_6.x86_64                   44/69 
+  Installing       : perl-File-Basename-2.85-481.1.el9_6.noarch           45/69 
+  Installing       : perl-Getopt-Std-1.12-481.1.el9_6.noarch              46/69 
+  Installing       : perl-Storable-1:3.21-460.el9.x86_64                  47/69 
+  Installing       : perl-overload-1.31-481.1.el9_6.noarch                48/69 
+  Installing       : perl-vars-1.05-481.1.el9_6.noarch                    49/69 
+  Installing       : perl-Getopt-Long-1:2.52-4.el9.noarch                 50/69 
+  Installing       : perl-Exporter-5.74-461.el9.noarch                    51/69 
+  Installing       : perl-Carp-1.50-460.el9.noarch                        52/69 
+  Installing       : perl-PathTools-3.78-461.el9.x86_64                   53/69 
+  Installing       : perl-NDBM_File-1.15-481.1.el9_6.x86_64               54/69 
+  Installing       : perl-Encode-4:3.08-462.el9.x86_64                    55/69 
+  Installing       : perl-libs-4:5.32.1-481.1.el9_6.x86_64                56/69 
+  Installing       : perl-interpreter-4:5.32.1-481.1.el9_6.x86_64         57/69 
+  Upgrading        : git-core-2.47.3-1.el9_6.x86_64                       58/69 
+  Installing       : git-core-doc-2.47.3-1.el9_6.noarch                   59/69 
+  Installing       : perl-Error-1:0.17029-7.el9.noarch                    60/69 
+  Installing       : perl-DynaLoader-1.47-481.1.el9_6.x86_64              61/69 
+  Installing       : perl-TermReadKey-2.38-11.el9.x86_64                  62/69 
+  Installing       : perl-File-Find-1.37-481.1.el9_6.noarch               63/69 
+  Installing       : perl-lib-0.65-481.1.el9_6.x86_64                     64/69 
+  Installing       : perl-Git-2.47.3-1.el9_6.noarch                       65/69 
+  Installing       : git-2.47.3-1.el9_6.x86_64                            66/69 
+  Upgrading        : nano-5.6.1-7.el9.x86_64                              67/69 
+  Cleanup          : nano-5.6.1-6.el9.x86_64                              68/69 
+  Cleanup          : git-core-2.43.5-2.el9_5.x86_64                       69/69 
+  Running scriptlet: git-core-2.43.5-2.el9_5.x86_64                       69/69 
+  Verifying        : perl-Data-Dumper-2.174-462.el9.x86_64                 1/69 
+  Verifying        : perl-Digest-MD5-2.58-4.el9.x86_64                     2/69 
+  Verifying        : perl-Encode-4:3.08-462.el9.x86_64                     3/69 
+  Verifying        : perl-Error-1:0.17029-7.el9.noarch                     4/69 
+  Verifying        : perl-Mozilla-CA-20200520-6.el9.noarch                 5/69 
+  Verifying        : perl-Pod-Simple-1:3.42-4.el9.noarch                   6/69 
+  Verifying        : perl-Term-Cap-1.17-460.el9.noarch                     7/69 
+  Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                   8/69 
+  Verifying        : perl-Time-Local-2:1.300-7.el9.noarch                  9/69 
+  Verifying        : perl-Pod-Escapes-1:1.07-460.el9.noarch               10/69 
+  Verifying        : perl-Storable-1:3.21-460.el9.x86_64                  11/69 
+  Verifying        : perl-podlators-1:4.14-460.el9.noarch                 12/69 
+  Verifying        : perl-Exporter-5.74-461.el9.noarch                    13/69 
+  Verifying        : perl-File-Temp-1:0.231.100-4.el9.noarch              14/69 
+  Verifying        : perl-Getopt-Long-1:2.52-4.el9.noarch                 15/69 
+  Verifying        : perl-MIME-Base64-3.16-4.el9.x86_64                   16/69 
+  Verifying        : perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch         17/69 
+  Verifying        : perl-parent-1:0.238-460.el9.noarch                   18/69 
+  Verifying        : perl-Digest-1.19-4.el9.noarch                        19/69 
+  Verifying        : perl-File-Path-2.18-4.el9.noarch                     20/69 
+  Verifying        : perl-IO-Socket-IP-0.41-5.el9.noarch                  21/69 
+  Verifying        : perl-Pod-Usage-4:2.01-4.el9.noarch                   22/69 
+  Verifying        : perl-Socket-4:2.031-4.el9.x86_64                     23/69 
+  Verifying        : perl-Term-ANSIColor-5.01-461.el9.noarch              24/69 
+  Verifying        : perl-Text-ParseWords-3.30-460.el9.noarch             25/69 
+  Verifying        : perl-URI-5.09-3.el9.noarch                           26/69 
+  Verifying        : perl-constant-1.33-461.el9.noarch                    27/69 
+  Verifying        : perl-Pod-Perldoc-3.28.01-461.el9.noarch              28/69 
+  Verifying        : perl-libnet-3.13-4.el9.noarch                        29/69 
+  Verifying        : perl-Carp-1.50-460.el9.noarch                        30/69 
+  Verifying        : perl-PathTools-3.78-461.el9.x86_64                   31/69 
+  Verifying        : perl-HTTP-Tiny-0.076-462.el9.noarch                  32/69 
+  Verifying        : perl-IO-Socket-SSL-2.073-2.el9.noarch                33/69 
+  Verifying        : perl-Net-SSLeay-1.94-1.el9.x86_64                    34/69 
+  Verifying        : perl-Scalar-List-Utils-4:1.56-462.el9.x86_64         35/69 
+  Verifying        : git-2.47.3-1.el9_6.x86_64                            36/69 
+  Verifying        : git-core-doc-2.47.3-1.el9_6.noarch                   37/69 
+  Verifying        : perl-Git-2.47.3-1.el9_6.noarch                       38/69 
+  Verifying        : perl-AutoLoader-5.74-481.1.el9_6.noarch              39/69 
+  Verifying        : perl-B-1.80-481.1.el9_6.x86_64                       40/69 
+  Verifying        : perl-Class-Struct-0.66-481.1.el9_6.noarch            41/69 
+  Verifying        : perl-DynaLoader-1.47-481.1.el9_6.x86_64              42/69 
+  Verifying        : perl-Errno-1.30-481.1.el9_6.x86_64                   43/69 
+  Verifying        : perl-Fcntl-1.13-481.1.el9_6.x86_64                   44/69 
+  Verifying        : perl-File-Basename-2.85-481.1.el9_6.noarch           45/69 
+  Verifying        : perl-File-Find-1.37-481.1.el9_6.noarch               46/69 
+  Verifying        : perl-File-stat-1.09-481.1.el9_6.noarch               47/69 
+  Verifying        : perl-FileHandle-2.03-481.1.el9_6.noarch              48/69 
+  Verifying        : perl-Getopt-Std-1.12-481.1.el9_6.noarch              49/69 
+  Verifying        : perl-IO-1.43-481.1.el9_6.x86_64                      50/69 
+  Verifying        : perl-IPC-Open3-1.21-481.1.el9_6.noarch               51/69 
+  Verifying        : perl-NDBM_File-1.15-481.1.el9_6.x86_64               52/69 
+  Verifying        : perl-POSIX-1.94-481.1.el9_6.x86_64                   53/69 
+  Verifying        : perl-SelectSaver-1.02-481.1.el9_6.noarch             54/69 
+  Verifying        : perl-Symbol-1.08-481.1.el9_6.noarch                  55/69 
+  Verifying        : perl-base-2.27-481.1.el9_6.noarch                    56/69 
+  Verifying        : perl-if-0.60.800-481.1.el9_6.noarch                  57/69 
+  Verifying        : perl-interpreter-4:5.32.1-481.1.el9_6.x86_64         58/69 
+  Verifying        : perl-lib-0.65-481.1.el9_6.x86_64                     59/69 
+  Verifying        : perl-libs-4:5.32.1-481.1.el9_6.x86_64                60/69 
+  Verifying        : perl-mro-1.23-481.1.el9_6.x86_64                     61/69 
+  Verifying        : perl-overload-1.31-481.1.el9_6.noarch                62/69 
+  Verifying        : perl-overloading-0.02-481.1.el9_6.noarch             63/69 
+  Verifying        : perl-subs-1.03-481.1.el9_6.noarch                    64/69 
+  Verifying        : perl-vars-1.05-481.1.el9_6.noarch                    65/69 
+  Verifying        : git-core-2.47.3-1.el9_6.x86_64                       66/69 
+  Verifying        : git-core-2.43.5-2.el9_5.x86_64                       67/69 
+  Verifying        : nano-5.6.1-7.el9.x86_64                              68/69 
+  Verifying        : nano-5.6.1-6.el9.x86_64                              69/69 
+Installed products updated.
+
+Upgraded:
+  git-core-2.47.3-1.el9_6.x86_64             nano-5.6.1-7.el9.x86_64            
+Installed:
+  git-2.47.3-1.el9_6.x86_64                                                     
+  git-core-doc-2.47.3-1.el9_6.noarch                                            
+  perl-AutoLoader-5.74-481.1.el9_6.noarch                                       
+  perl-B-1.80-481.1.el9_6.x86_64                                                
+  perl-Carp-1.50-460.el9.noarch                                                 
+  perl-Class-Struct-0.66-481.1.el9_6.noarch                                     
+  perl-Data-Dumper-2.174-462.el9.x86_64                                         
+  perl-Digest-1.19-4.el9.noarch                                                 
+  perl-Digest-MD5-2.58-4.el9.x86_64                                             
+  perl-DynaLoader-1.47-481.1.el9_6.x86_64                                       
+  perl-Encode-4:3.08-462.el9.x86_64                                             
+  perl-Errno-1.30-481.1.el9_6.x86_64                                            
+  perl-Error-1:0.17029-7.el9.noarch                                             
+  perl-Exporter-5.74-461.el9.noarch                                             
+  perl-Fcntl-1.13-481.1.el9_6.x86_64                                            
+  perl-File-Basename-2.85-481.1.el9_6.noarch                                    
+  perl-File-Find-1.37-481.1.el9_6.noarch                                        
+  perl-File-Path-2.18-4.el9.noarch                                              
+  perl-File-Temp-1:0.231.100-4.el9.noarch                                       
+  perl-File-stat-1.09-481.1.el9_6.noarch                                        
+  perl-FileHandle-2.03-481.1.el9_6.noarch                                       
+  perl-Getopt-Long-1:2.52-4.el9.noarch                                          
+  perl-Getopt-Std-1.12-481.1.el9_6.noarch                                       
+  perl-Git-2.47.3-1.el9_6.noarch                                                
+  perl-HTTP-Tiny-0.076-462.el9.noarch                                           
+  perl-IO-1.43-481.1.el9_6.x86_64                                               
+  perl-IO-Socket-IP-0.41-5.el9.noarch                                           
+  perl-IO-Socket-SSL-2.073-2.el9.noarch                                         
+  perl-IPC-Open3-1.21-481.1.el9_6.noarch                                        
+  perl-MIME-Base64-3.16-4.el9.x86_64                                            
+  perl-Mozilla-CA-20200520-6.el9.noarch                                         
+  perl-NDBM_File-1.15-481.1.el9_6.x86_64                                        
+  perl-Net-SSLeay-1.94-1.el9.x86_64                                             
+  perl-POSIX-1.94-481.1.el9_6.x86_64                                            
+  perl-PathTools-3.78-461.el9.x86_64                                            
+  perl-Pod-Escapes-1:1.07-460.el9.noarch                                        
+  perl-Pod-Perldoc-3.28.01-461.el9.noarch                                       
+  perl-Pod-Simple-1:3.42-4.el9.noarch                                           
+  perl-Pod-Usage-4:2.01-4.el9.noarch                                            
+  perl-Scalar-List-Utils-4:1.56-462.el9.x86_64                                  
+  perl-SelectSaver-1.02-481.1.el9_6.noarch                                      
+  perl-Socket-4:2.031-4.el9.x86_64                                              
+  perl-Storable-1:3.21-460.el9.x86_64                                           
+  perl-Symbol-1.08-481.1.el9_6.noarch                                           
+  perl-Term-ANSIColor-5.01-461.el9.noarch                                       
+  perl-Term-Cap-1.17-460.el9.noarch                                             
+  perl-TermReadKey-2.38-11.el9.x86_64                                           
+  perl-Text-ParseWords-3.30-460.el9.noarch                                      
+  perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch                                  
+  perl-Time-Local-2:1.300-7.el9.noarch                                          
+  perl-URI-5.09-3.el9.noarch                                                    
+  perl-base-2.27-481.1.el9_6.noarch                                             
+  perl-constant-1.33-461.el9.noarch                                             
+  perl-if-0.60.800-481.1.el9_6.noarch                                           
+  perl-interpreter-4:5.32.1-481.1.el9_6.x86_64                                  
+  perl-lib-0.65-481.1.el9_6.x86_64                                              
+  perl-libnet-3.13-4.el9.noarch                                                 
+  perl-libs-4:5.32.1-481.1.el9_6.x86_64                                         
+  perl-mro-1.23-481.1.el9_6.x86_64                                              
+  perl-overload-1.31-481.1.el9_6.noarch                                         
+  perl-overloading-0.02-481.1.el9_6.noarch                                      
+  perl-parent-1:0.238-460.el9.noarch                                            
+  perl-podlators-1:4.14-460.el9.noarch                                          
+  perl-subs-1.03-481.1.el9_6.noarch                                             
+  perl-vars-1.05-481.1.el9_6.noarch                                             
+
+Complete!
+Cloning into '/tmp/cache'...
+[WARNING]: Collection community.general does not support Ansible version
+2.14.17
+
+PLAY [Configure Gitea host] ****************************************************
+
+TASK [Install python3 Gitea] ***************************************************
+fatal: [gitea]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host gitea port 22: Connection timed out", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+gitea                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found undefined alias
+
+The error appears to be in '/tmp/controller-setup.yml': line 33, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        controller_password: "{{ controller_admin_password }}"
+        <<: *controller_auth_params # Merge in common connection params
+            ^ here
++ sudo dnf clean all
+Updating Subscription Management repositories.
+19 files removed
++ sudo dnf install -y ansible-navigator ansible-lint nc
+Updating Subscription Management repositories.
+Red Hat Enterprise Linux 9 for x86_64 - AppStre  65 MB/s |  67 MB     00:01    
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS   90 MB/s |  75 MB     00:00    
+Last metadata expiration check: 0:00:08 ago on Fri 05 Sep 2025 02:19:48 PM SAST.
+No match for argument: ansible-navigator
+No match for argument: ansible-lint
+Package nmap-ncat-3:7.92-3.el9.x86_64 is already installed.
+Error: Unable to find a match: ansible-navigator ansible-lint
++ pip3.9 install yamllint
+Collecting yamllint
+  Downloading yamllint-1.37.1-py3-none-any.whl (68 kB)
+Requirement already satisfied: pyyaml in /usr/lib64/python3.9/site-packages (from yamllint) (5.4.1)
+Collecting pathspec>=0.5.3
+  Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Installing collected packages: pathspec, yamllint
+  WARNING: The script yamllint is installed in '/usr/local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pathspec-0.12.1 yamllint-1.37.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
